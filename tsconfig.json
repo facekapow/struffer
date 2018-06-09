@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "rootDir": ".",
+    "outDir": "build",
+    "target": "es2017",
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "sourceMap": true,
+    "strict": true
+  },
+  "include": [
+    "src/*.ts",
+    "test/*.ts",
+    "examples/*.ts"
+  ],
+  "typeAcquisition": {
+    "enable": true
+  }
+}

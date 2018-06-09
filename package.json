@@ -1,0 +1,41 @@
+{
+  "name": "struffer",
+  "version": "1.0.0",
+  "description": "Struct + Buffer = Struffer",
+  "main": "build/src/index.js",
+  "scripts": {
+    "test": "alsatian \"./build/test/*.test.js\"",
+    "coverage": "nyc --reporter=lcov --reporter=html npm run test && nyc report",
+    "lint": "tslint -p .",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/facekapow/struffer.git"
+  },
+  "keywords": [
+    "struct",
+    "buffer",
+    "bit",
+    "byte",
+    "uint8array",
+    "u8",
+    "typed",
+    "array"
+  ],
+  "author": "Ariel Abreu <facekapow@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/facekapow/struffer/issues"
+  },
+  "homepage": "https://github.com/facekapow/struffer#readme",
+  "devDependencies": {
+    "@types/node": "^10.3.1",
+    "alsatian": "^2.2.1",
+    "nyc": "^12.0.2",
+    "tslint": "^5.10.0",
+    "tslint-config-airbnb": "^5.9.2",
+    "tslint-eslint-rules": "^5.3.1",
+    "typescript": "^2.9.1"
+  }
+}
