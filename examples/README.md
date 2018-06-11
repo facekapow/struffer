@@ -1,0 +1,6 @@
+# Examples
+
+Here you'll find examples for how to use struffers. Enjoy!
+
+  * For normal struffers, [right this way](simple.ts)...
+  * For advanced struffers, [follow me](advanced.ts)...
