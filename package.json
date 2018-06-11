@@ -21,7 +21,10 @@
     "uint8array",
     "u8",
     "typed",
-    "array"
+    "array",
+    "data",
+    "structure",
+    "template"
   ],
   "author": "Ariel Abreu <facekapow@outlook.com>",
   "license": "MIT",
@@ -32,6 +35,7 @@
   "devDependencies": {
     "@types/node": "^10.3.1",
     "alsatian": "^2.2.1",
+    "coveralls": "^3.0.1",
     "nyc": "^12.0.2",
     "tslint": "^5.10.0",
     "tslint-config-airbnb": "^5.9.2",

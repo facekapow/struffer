@@ -1,0 +1,30 @@
+language: node_js
+node_js:
+  - node
+
+before_script:
+  - npm run lint
+  - npm run build
+script:
+  - npm test
+after_success:
+  - npm run coverage && nyc report --reporter=text-lcov | ./node_modules/.bin/coveralls
+
+before_deploy:
+  - npm pack
+deploy:
+  - provider: releases
+    skip_cleanup: true
+    api_key:
+      secure: MDyUZX5ox8RiieMr4YAzD/+U9hQekowzkimUA4lFhToY7TL7KaXS2PffpQbWtOeKtrJCVkNHH7kX37mtIFWd98C2Qhua/NDVTGWhgIVZ2y8GzhN+8wPpbjXwFaWT64ajjCRKuJJaiO/JRWQ68TUTM3FEaIhy13tsOHJvZ8nd90ekFwObFbxTg5rPHNIRjkqPsQq5HWWVkfNeD/YOw06y3JaEY7DQYLjhZvvqXWPgCvS3GoLN/65X1lRTBzFdCNCDNsm5yKvSvkhLuaVunya3HoQDGtU6SsOVspEIYRb6sc+Uj35iuyr4wCenLAUZfKYhKkmtMuOx/d+fy2TaMAQv013xMP5HyreifpceR4zEP1GMTDs85xW5dLfIRaqVOL1IEyT0QyoOtmjgMPaExAaRIYCzejcwvDIIUYv8UIUypfA5E9A+NyYmVmPE7hom0PHEYMTdX0mKaDFdZ3II58pZyhNYGev/m3ZN3cy0AJMAz2p7GY+1ZVhregIhc17SoQpyikO5sFmNuQd8sSJpggB9j80VLl6ZE0UEfdWJPf/jxvF8cPgUbXkd57vm0eTJgfWrBqSAZpMeZ0Z4y3Ar+4n2qxJVa1QcJozXSVZHLocuzs5Q4ODF/QO4/NDPUzlU7awpP95XzT0yb1YiwqQmzh91qSlohOdq67I0sLKlvUdoa/8=
+    file: "*.tgz"
+    file_glob: true
+    on:
+      tags: true
+  - provider: npm
+    skip_cleanup: true
+    email: facekapow@outlook.com
+    api_key:
+      secure: t/N3wh1qbXTjaN4r5pXDw/1e1ZYlUj2LevzgPR5hhiR1DDyvGuADbvnaV/7MIhQZNQcS11GkwO/u8AvAy9qAb/MwzgE9ywpYtnkmlm6E9QzaSKzF3Pl+GowMSWrvTbs0HEypULabhZi9WGDzhWlEC1K9ilNcd78SXVabmCow5lRuJtclwZcEVqDOuvy0lWxMJwEXKC4dvDZ1yjpR8y6tUtxv/IKbS1zzdI/rzMjaA3EOVnJK/Hkg15mLqH+ppEaq1hm8/9LqqRwoDpd2p0GzZRzuiVgbqBpSsKZ2Vv2F4mFQtHnUgbNTod2l7kYW2iI75GVWwHTv1t6GKX3MDTBr5eDuzWxuJ7Aih7DChHXBwCRWvLpZcu2QxcCCpCjxjup536EO1odoKcLzTrt3wTO+nXJB8QZmR1IEFhHBDBIk/bkgBEVbeMU5hX+QiiYlITtrgxqHq0Q5gd3+rC95c0rsfqLx/k/DQ6vmpRZTEtMZ+Atcx6CqRthd024/8bnXn9UFhzkUclvDmYQD8vhQaaSWnRdGuuN2vXScnwgOBsRSncV09rpVnKwGugDsRQVRM3OuFmqHuDeAeJZ8vQewDN9J3Z4WMQNVvnKdFtAARxaif20Ij/77Cb67Nd1dc+HaNZ3kjoiTL80/hosGe87MvjANAKyTjmz6FJ5yt16Sa/XlAi0=
+    on:
+      tags: true
