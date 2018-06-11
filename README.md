@@ -1,4 +1,8 @@
 # Struffer
+[![Travis CI Build Status](https://img.shields.io/travis/facekapow/struffer.svg?style=for-the-badge)](https://travis-ci.org/facekapow/struffer)
+[![Coveralls.io Test Coverage Status](https://img.shields.io/coveralls/github/facekapow/struffer.svg?style=for-the-badge)](https://coveralls.io/github/facekapow/struffer)
+[![Package version](https://img.shields.io/github/package-json/v/facekapow/struffer.svg?style=for-the-badge)](https://www.npmjs.com/package/struffer)
+
 Struct + Buffer = Struffer
 Also works with Uint8Arrays
 
