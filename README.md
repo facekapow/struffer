@@ -3,7 +3,7 @@
 [![Coveralls.io Test Coverage Status](https://img.shields.io/coveralls/github/facekapow/struffer.svg?style=for-the-badge)](https://coveralls.io/github/facekapow/struffer)
 [![Package version](https://img.shields.io/github/package-json/v/facekapow/struffer.svg?style=for-the-badge)](https://www.npmjs.com/package/struffer)
 
-Struct + Buffer = Struffer
+Struct + Buffer = Struffer.
 Also works with Uint8Arrays
 
 Why? Because Buffers (and Uint8Arrays) are great, but manipulating data with them is highly 
