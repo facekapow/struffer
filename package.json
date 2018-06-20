@@ -1,13 +1,14 @@
 {
   "name": "struffer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Struct + Buffer = Struffer",
   "main": "build/src/index.js",
+  "types": "build/src/index.d.ts",
   "scripts": {
     "test": "alsatian \"./build/test/*.test.js\"",
     "coverage": "nyc --reporter=lcov --reporter=html npm run test && nyc report",
     "lint": "tslint -p .",
-    "build": "tsc"
+    "build": "tsc --declaration"
   },
   "repository": {
     "type": "git",
